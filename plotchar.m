@@ -5,9 +5,6 @@ function plotchar(c)
 %    C - a 35 element vector.
 %  C's elements are plotted as a 5x7 grid.
 
-% Mark Beale, 12-15-93
-% Copyright 1992-2002 The MathWorks, Inc.
-% $Revision: 1.11 $  $Date: 2002/04/14 21:23:48 $
 
 % DEFINE BOX
 x1 = [-0.5 -0.5 +0.5 +0.5 -0.5];
