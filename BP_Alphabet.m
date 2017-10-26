@@ -30,16 +30,16 @@ plotchar(SegNoise)
 output=sim(net,SegNoise);
 [m,A_Id]=max(output)
 
-round = round - 0.1;
+round = round - 0.025;
 end
 
 %test for Seg with the same training data
-%Seg = Al(:,number);
+Seg = Al(:,number);
 
-%figure
-%plotchar(Seg)
-%output=sim(net,Al(:,number));
-%[m,A_Id]=max(output)
+figure
+plotchar(Seg)
+output=sim(net,Al(:,number));
+[m,A_Id]=max(output)
 
 
 
