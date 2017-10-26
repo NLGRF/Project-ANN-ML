@@ -1,7 +1,7 @@
 prompt = 'What is the number on Segment(1-9)? ';
 number = input(prompt)
 
-round = 0.5;
+round = 0.6;
 
 %Backprogation to pattern recognition problem (Alphabet).
 
@@ -21,7 +21,7 @@ net = train(net,Al,T);
 %output=sim(net,Al(:,11));
 %[m,A_Id]=max(output)
 
-while round>0 
+while round>0.1 
 %test for Seg with noise generated
 SegNoise=Al(:,number)+round*randn(size(Al(:,number)));
 
@@ -34,12 +34,12 @@ round = round - 0.1;
 end
 
 %test for Seg with the same training data
-%Seg = Al(:,number);
+Seg = Al(:,number);
 
-%figure
-%plotchar(Seg)
-%output=sim(net,Al(:,number));
-%[m,A_Id]=max(output)
+figure
+plotchar(Seg)
+output=sim(net,Al(:,number));
+[m,A_Id]=max(output)
 
 
 
